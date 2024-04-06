@@ -1,2 +1,4 @@
 # destiny-item-analyzer
-Destiny Item Analyzer
+Version 1.0.0
+
+Analyze my Destiny character's items.
