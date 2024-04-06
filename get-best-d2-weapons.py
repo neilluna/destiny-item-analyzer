@@ -227,7 +227,7 @@ weapon_catagories = [
 weapon_types = [weapon_catagory.type for weapon_catagory in weapon_catagories]
 
 config = ConfigParser()
-config.read('destiny-item-manager.ini')
+config.read('destiny-item-analyzer.ini')
 API_KEY = config['DEFAULT']['ApiKey']
 USERNAME = config['DEFAULT']['UserName']
 
@@ -241,11 +241,11 @@ weapon_name_pattern = r'<h2 id="(.*?)">\s?<span class="item-num">(.*?)\s?</span>
 
 
 async def get_manifest():
-    filename = 'destiny-item-manager.json'
-    if not os.path.isfile(filename):
-        console.print('Downloading manifest ...')
-        await client.rest.download_json_manifest(filename)
-    with open(filename, "r") as file:
+    filename = 'destiny-item-analyzer'
+    if not os.path.isfile(f'{filename}.json'):
+        console.print(f'Downloading manifest to {filename}.json ...')
+        await client.rest.download_json_manifest(file_name = filename)
+    with open(f'{filename}.json', "r") as file:
         manifest = json.loads(file.read())
         return list(manifest["DestinyInventoryItemDefinition"].values())
 
@@ -295,7 +295,6 @@ async def main():
     console.print(f'{datetime.now().strftime("%Y-%m-%dT%H:%M:%S")}')
     console.print('')
 
-    manifest = await get_manifest()
     async with client.rest:
         manifest = await get_manifest()
 
@@ -315,7 +314,7 @@ async def main():
 
     for weapon_catagory in weapon_catagories:
         console.print('')
-        console.print(f'[bold]{weapon_catagory.type}s[/bold]')
+        console.print(f'[bold]{weapon_catagory.type}[/bold]')
         console.print(f'[underline blue]{weapon_catagory.url}[/underline blue]')
         console.print('')
 

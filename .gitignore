@@ -3,5 +3,5 @@
 .venv/
 __pycache__/
 *.py[cod]
-destiny-item-manager.ini
-destiny-item-manager.json
+destiny-item-analyzer.ini
+destiny-item-analyzer.json
