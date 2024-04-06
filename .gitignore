@@ -1,0 +1,7 @@
+.dia-venv/
+.vscode/
+.venv/
+__pycache__/
+*.py[cod]
+destiny-item-analyzer.ini
+destiny-item-analyzer.json
