@@ -217,7 +217,7 @@ weapon_catagories = [
     WeaponCatagory('Pulse Rifle',         [], 'https://www.thegamer.com/destiny-2-best-pulse-rifles-ranked/'),
     WeaponCatagory('Rocket Launcher',     [], 'https://www.thegamer.com/destiny-2-top-best-rocket-launchers-ranked/'),
     WeaponCatagory('Scout Rifle',         [], 'https://www.thegamer.com/destiny-2-best-pve-scout-rifles-ranked/'),
-    WeaponCatagory('Shotgun',             [], 'https://www.thegamer.com/destiny-2-best-pvp-shotguns/'),
+    WeaponCatagory('Shotgun',             [], 'https://www.thegamer.com/destiny-2-best-pve-shotguns/'),
     WeaponCatagory('Sidearm',             [], 'https://www.thegamer.com/destiny-2-best-sidearms/'),
     WeaponCatagory('Sniper Rifle',        [], 'https://www.thegamer.com/destiny-2-best-pve-sniper-rifles-ranked/'),
     WeaponCatagory('Submachine Gun',      [], 'https://www.thegamer.com/destiny-2-best-pve-smgs-ranked/'),
