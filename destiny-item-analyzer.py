@@ -13,9 +13,6 @@ from datetime import datetime
 from rich.console import Console
 
 
-
-
-
 red_war_exotic_weapons = [
     'legend of acrius',
     'mida multi-tool',
@@ -253,7 +250,9 @@ client = aiobungie.Client(API_KEY)
 console = Console(highlight=False)
 
 http_headers = {
-    "user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+    "user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
+        'Chrome/125.0.0.0 ' +
+        'Safari/537.36',
 }
 weapon_name_pattern = r'<h2 id="(.*?)">\s?<span class="item-num">(.*?)\s?</span>\s?<span>(.*?)</span>\s?</h2>'
 
@@ -363,48 +362,48 @@ async def main():
                 best_weapon_name = f'[underline]{best_weapon_name}[/underline]'
 
             if best_weapon_name_lowered in red_war_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Red War Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Red War Exotics)'
             if best_weapon_name_lowered in forsaken_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Forsaken Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Forsaken Exotics)'
             if best_weapon_name_lowered in shadowkeep_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Shadowkeep Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Shadowkeep Exotics)'
             if best_weapon_name_lowered in beyond_light_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Beyond Light Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Beyond Light Exotics)'
             if best_weapon_name_lowered in the_witch_queen_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - The Witch Queen Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - The Witch Queen Exotics)'
             if best_weapon_name_lowered in lightfall_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Lightfall Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Lightfall Exotics)'
             if best_weapon_name_lowered in the_final_shape_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - The Final Shape Exotics[/yellow])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - The Final Shape Exotics)'
             if best_weapon_name_lowered in legacy_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy)'
             if best_weapon_name_lowered in legacy_crucible_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Crucible[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Crucible)'
             if best_weapon_name_lowered in legacy_gambit_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Gambit[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Gambit)'
             if best_weapon_name_lowered in legacy_vanguard_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Vanguard[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Vanguard)'
 
             if best_weapon_name_lowered in gunsmith_focused_decoding_suros_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Suros[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Focused Decoding - Suros)'
             if best_weapon_name_lowered in gunsmith_focused_decoding_field_forged_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Field-Forged[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Focused Decoding - Field-Forged)'
             if best_weapon_name_lowered in gunsmith_featured_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Featured[/purple])'
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Featured)'
 
             if best_weapon_name_lowered in vanguard_focused_decoding_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding[/blue])'
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding)'
             if best_weapon_name_lowered in vanguard_focused_decoding_nightfall_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Nightfall[/blue])'
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Nightfall)'
             if best_weapon_name_lowered in vanguard_focused_decoding_legacy_vanguard_ops_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Legacy Vanguard Ops[/blue])'
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Legacy Vanguard Ops)'
             if best_weapon_name_lowered in vanguard_focused_decoding_legacy_nightfall_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Legacy Nightfall[/blue])'
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Legacy Nightfall)'
 
             if best_weapon_name_lowered in drifter_focused_decoding_weapons:
-                best_weapon_name = f'{best_weapon_name} ([green]Drifter - Focused Decoding[/green])'
+                best_weapon_name = f'{best_weapon_name} (Drifter - Focused Decoding)'
             if best_weapon_name_lowered in drifter_focused_decoding_legacy_weapons:
-                best_weapon_name = f'{best_weapon_name} ([green]Drifter - Focused Decoding - Legacy[/green])'
+                best_weapon_name = f'{best_weapon_name} (Drifter - Focused Decoding - Legacy)'
 
             console.print(f'{best_weapon.rank:02d} - {best_weapon_name}')
 
