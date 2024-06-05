@@ -13,15 +13,16 @@ from datetime import datetime
 from rich.console import Console
 
 
+
+
+
 red_war_exotic_weapons = [
     'legend of acrius',
     'mida multi-tool',
-    'outbreak perfected',
     'polaris lance',
     'rat king',
     'sleeper stimulant',
     'sturm',
-    'whisper of the worm',
     'worldline zero',
 ]
 
@@ -41,9 +42,9 @@ forsaken_exotic_weapons = [
 ]
 
 shadowkeep_exotic_weapons = [
-    "ariana's vow",
     'bastion',
     "devil's ruin",
+    "eriana's vow",
     "leviathan's breath",
     'ruinous effigy',
     'symmetry',
@@ -70,9 +71,11 @@ the_witch_queen_exotic_weapons = [
 
 lightfall_exotic_weapons = [
     'centrifuse',
+    "dragon's breath",
     'ex diris',
     'quicksilver storm',
     'verglas curve',
+    'wicked implement',
 ]
 
 the_final_shape_exotic_weapons = [
@@ -83,6 +86,7 @@ legacy_weapons = [
     'adored',
     'ascendancy',
     'chain of command',
+    'chivalric fire',
     'cry mutiny',
     'ecliptic distaff',
     "felwinter's lie",
@@ -107,7 +111,6 @@ legacy_crucible_weapons = [
 legacy_gambit_weapons = [
     '21% delirium',
     'exit strategy',
-    'hush',
     'python',
 ]
 
@@ -118,6 +121,7 @@ legacy_vanguard_weapons = [
 
 gunsmith_focused_decoding_suros_weapons = [
     'cantata-57',
+    'coronach-22',
     'fioritura-59',
     'fugue-55',
     'pizzicato-22',
@@ -125,80 +129,94 @@ gunsmith_focused_decoding_suros_weapons = [
     'syncopation-53',
 ]
 
-gunsmith_focused_decoding_omolon_weapons = [
-    'ammit ar2',
-    'aurvandil fr6',
-    'gallu rr3',
-    'ogma pr6',
-    'snorri fr5',
-    'typhon gl5',
+gunsmith_focused_decoding_field_forged_weapons = [
+    'battle scar',
+    'hand in hand',
+    'harsh language',
+    'nasreddin',
 ]
 
 gunsmith_featured_weapons = [
-    'whispering slab',
-    "timelines' vertex",
-    'austringer',
-    'piece of mind',
-    'palmyra-b',
+    'chrysura melo',
+    'true prophecy',
+    'seventh seraph si-2',
+    'far future',
+    "tempation's hook",
 ]
 
-vanguard_weapons = [
-    'braytech osprey',
-    'buzzard',
-    'd.f.a.',
+vanguard_focused_decoding_weapons = [
     'double-edged answer',
-    'duty bound',
-    'empty vessel',
-    'fortissimo-11',
-    "horror's least",
-    'hung jury sr4',
-    'loaded question',
     'luna regolith iii',
-    'main ingrediant',
-    "mindbender's ambition",
     'nameless midnight',
-    'outrageous fortune',
-    'plug one.1',
+    'origin story',
     'positive outlook',
-    'pre astyanax iv',
     'prolonged engagement',
-    'punching out',
-    'pure poetry',
-    'royal entry',
-    'silicon neuroma',
-    'strident whistle',
-    'the comedian',
-    'the hothead',
-    'the last dance',
-    "the militia's birthright",
+]
+
+vanguard_focused_decoding_nightfall_weapons = [
+    'pre astyanax iv',
+    'scintillation',
+    'shadow price',
     'the slammer',
-    'the swarm',
-    'the third axiom',
     'undercurrent',
     'uzume rr4',
     "warden's law",
-    'wild style (adept)',
+    "warden's law (adept)",
     'wild style',
-    'windigo gl3',
+]
+
+vanguard_focused_decoding_legacy_vanguard_ops_weapons = [
+    'empty vessel',
+    'fortissimo-11',
+    'main ingrediant',
+    'outrageous fortune',
+    'punching out',
+    'pure poetry',
+    'royal entry',
+    'strident whistle',
+    'the last dance',
+    'the third axiom',
     'xenoclast iv',
 ]
 
-drifter_weapons = [
+vanguard_focused_decoding_legacy_nightfall_weapons = [
+    'braytech osprey',
+    'buzzard',
+    'd.f.a.',
+    'duty bound',
+    "horror's least",
+    'hung jury sr4',
+    'loaded question',
+    "mindbender's ambition",
+    'plug one.1',
+    'silicon neuroma',
+    'the comedian',
+    'the hothead',
+    "the militia's birthright",
+    'the swarm',
+    'wendigo gl3',
+]
+
+drifter_focused_decoding_weapons = [
     'albruna-d',
+    'breakneck',
+    'hush',
+    'laser painter',
+    'qua xaphan v',
+    'trust',
+]
+
+drifter_focused_decoding_legacy_weapons = [
     'bad omens',
     'borrowed time',
     'bottom dollar',
-    'breakneck',
     'crowd pleaser',
     'dead weight',
-    'gnawing hunger',
     'herod-c',
-    'laser painter',
+    'gnawing hunger',
     'night watch',
-    'qua xaphan v',
     'servant leader',
     'trinary system',
-    'trust',
     'yesteryear',
 ]
 
@@ -343,6 +361,7 @@ async def main():
 
             if best_weapon_name_lowered in owned_weapons:
                 best_weapon_name = f'[underline]{best_weapon_name}[/underline]'
+
             if best_weapon_name_lowered in red_war_exotic_weapons:
                 best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Red War Exotics[/yellow])'
             if best_weapon_name_lowered in forsaken_exotic_weapons:
@@ -365,16 +384,27 @@ async def main():
                 best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Gambit[/purple])'
             if best_weapon_name_lowered in legacy_vanguard_weapons:
                 best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Vanguard[/purple])'
+
             if best_weapon_name_lowered in gunsmith_focused_decoding_suros_weapons:
                 best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Suros[/purple])'
-            if best_weapon_name_lowered in gunsmith_focused_decoding_omolon_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Omolon[/purple])'
+            if best_weapon_name_lowered in gunsmith_focused_decoding_field_forged_weapons:
+                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Field-Forged[/purple])'
             if best_weapon_name_lowered in gunsmith_featured_weapons:
                 best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Featured[/purple])'
-            if best_weapon_name_lowered in vanguard_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard[/blue])'
-            if best_weapon_name_lowered in drifter_weapons:
-                best_weapon_name = f'{best_weapon_name} ([green]Drifter[/green])'
+
+            if best_weapon_name_lowered in vanguard_focused_decoding_weapons:
+                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding[/blue])'
+            if best_weapon_name_lowered in vanguard_focused_decoding_nightfall_weapons:
+                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Nightfall[/blue])'
+            if best_weapon_name_lowered in vanguard_focused_decoding_legacy_vanguard_ops_weapons:
+                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Legacy Vanguard Ops[/blue])'
+            if best_weapon_name_lowered in vanguard_focused_decoding_legacy_nightfall_weapons:
+                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard - Focused Decoding - Legacy Nightfall[/blue])'
+
+            if best_weapon_name_lowered in drifter_focused_decoding_weapons:
+                best_weapon_name = f'{best_weapon_name} ([green]Drifter - Focused Decoding[/green])'
+            if best_weapon_name_lowered in drifter_focused_decoding_legacy_weapons:
+                best_weapon_name = f'{best_weapon_name} ([green]Drifter - Focused Decoding - Legacy[/green])'
 
             console.print(f'{best_weapon.rank:02d} - {best_weapon_name}')
 
