@@ -13,19 +13,17 @@ from datetime import datetime
 from rich.console import Console
 
 
-red_war_exotic_weapons = [
+RED_WAR_EXOTIC_WEAPONS = [
     'legend of acrius',
     'mida multi-tool',
-    'outbreak perfected',
     'polaris lance',
     'rat king',
     'sleeper stimulant',
     'sturm',
-    'whisper of the worm',
     'worldline zero',
 ]
 
-forsaken_exotic_weapons = [
+FORSAKEN_EXOTIC_WEAPONS = [
     'ace of spades',
     'always on time',
     'anarchy',
@@ -40,10 +38,10 @@ forsaken_exotic_weapons = [
     'truth',
 ]
 
-shadowkeep_exotic_weapons = [
-    "ariana's vow",
+SHADOWKEEP_EXOTIC_WEAPONS = [
     'bastion',
     "devil's ruin",
+    "eriana's vow",
     "leviathan's breath",
     'ruinous effigy',
     'symmetry',
@@ -53,7 +51,7 @@ shadowkeep_exotic_weapons = [
     'witherhoard',
 ]
 
-beyond_light_exotic_weapons = [
+BEYOND_LIGHT_EXOTIC_WEAPONS = [
     "ager's scepter",
     'cryosthesia 77k',
     'duality',
@@ -61,28 +59,31 @@ beyond_light_exotic_weapons = [
     "ticuu's divination",
 ]
 
-the_witch_queen_exotic_weapons = [
+THE_WITCH_QUEEN_EXOTIC_WEAPONS = [
     'delicate tomb',
     'grand overture',
     'the maticore',
     'trespasser',
 ]
 
-lightfall_exotic_weapons = [
+LIGHTFALL_EXOTIC_WEAPONS = [
     'centrifuse',
+    "dragon's breath",
     'ex diris',
     'quicksilver storm',
     'verglas curve',
+    'wicked implement',
 ]
 
-the_final_shape_exotic_weapons = [
+THE_FINAL_SHAPE_EXOTIC_WEAPONS = [
     'tessellation',
 ]
 
-legacy_weapons = [
+LEGACY_WEAPONS = [
     'adored',
     'ascendancy',
     'chain of command',
+    'chivalric fire',
     'cry mutiny',
     'ecliptic distaff',
     "felwinter's lie",
@@ -94,7 +95,7 @@ legacy_weapons = [
     'veles-x',
 ]
 
-legacy_crucible_weapons = [
+LEGACY_CRUCIBLE_WEAPONS = [
     'komodo-4fr',
     "luna's howl",
     'not forgotten',
@@ -104,20 +105,20 @@ legacy_crucible_weapons = [
     'the recluse',
 ]
 
-legacy_gambit_weapons = [
+LEGACY_GAMBIT_WEAPONS = [
     '21% delirium',
     'exit strategy',
-    'hush',
     'python',
 ]
 
-legacy_vanguard_weapons = [
+LEGACY_VANGUARD_WEAPONS = [
     'edgewise',
     'oxygen sr3',
 ]
 
-gunsmith_focused_decoding_suros_weapons = [
+GUNSMITH_FOCUSED_DECODING_SUROS_WEAPONS = [
     'cantata-57',
+    'coronach-22',
     'fioritura-59',
     'fugue-55',
     'pizzicato-22',
@@ -125,132 +126,154 @@ gunsmith_focused_decoding_suros_weapons = [
     'syncopation-53',
 ]
 
-gunsmith_focused_decoding_omolon_weapons = [
-    'ammit ar2',
-    'aurvandil fr6',
-    'gallu rr3',
-    'ogma pr6',
-    'snorri fr5',
-    'typhon gl5',
+GUNSMITH_FOCUSED_DECODING_FIELD_FORGED_WEAPONS = [
+    'battle scar',
+    'hand in hand',
+    'harsh language',
+    'nasreddin',
 ]
 
-gunsmith_featured_weapons = [
-    'whispering slab',
-    "timelines' vertex",
-    'austringer',
-    'piece of mind',
-    'palmyra-b',
+GUNSMITH_FEATURED_WEAPONS = [
+    'chrysura melo',
+    'true prophecy',
+    'seventh seraph si-2',
+    'far future',
+    "tempation's hook",
 ]
 
-vanguard_weapons = [
-    'braytech osprey',
-    'buzzard',
-    'd.f.a.',
+VANGUARD_FOCUSED_DECODING_WEAPONS = [
     'double-edged answer',
-    'duty bound',
-    'empty vessel',
-    'fortissimo-11',
-    "horror's least",
-    'hung jury sr4',
-    'loaded question',
     'luna regolith iii',
-    'main ingrediant',
-    "mindbender's ambition",
     'nameless midnight',
-    'outrageous fortune',
-    'plug one.1',
+    'origin story',
     'positive outlook',
-    'pre astyanax iv',
     'prolonged engagement',
-    'punching out',
-    'pure poetry',
-    'royal entry',
-    'silicon neuroma',
-    'strident whistle',
-    'the comedian',
-    'the hothead',
-    'the last dance',
-    "the militia's birthright",
+]
+
+VANGUARD_FOCUSED_DECODING_NIGHTFALL_WEAPONS = [
+    'pre astyanax iv',
+    'scintillation',
+    'shadow price',
     'the slammer',
-    'the swarm',
-    'the third axiom',
     'undercurrent',
     'uzume rr4',
     "warden's law",
-    'wild style (adept)',
+    "warden's law (adept)",
     'wild style',
-    'windigo gl3',
+]
+
+VANGUARD_FOCUSED_DECODING_LEGACY_VANGUARD_OPS_WEAPONS = [
+    'empty vessel',
+    'fortissimo-11',
+    'main ingrediant',
+    'outrageous fortune',
+    'punching out',
+    'pure poetry',
+    'royal entry',
+    'strident whistle',
+    'the last dance',
+    'the third axiom',
     'xenoclast iv',
 ]
 
-drifter_weapons = [
+VANGUARD_FOCUSED_DECODING_LEGACY_NIGHTFALL_WEAPONS = [
+    'braytech osprey',
+    'buzzard',
+    'd.f.a.',
+    'duty bound',
+    "horror's least",
+    'hung jury sr4',
+    'loaded question',
+    "mindbender's ambition",
+    'plug one.1',
+    'silicon neuroma',
+    'the comedian',
+    'the hothead',
+    "the militia's birthright",
+    'the swarm',
+    'wendigo gl3',
+]
+
+DRIFTER_FOCUSED_DECODING_WEAPONS = [
     'albruna-d',
+    'breakneck',
+    'hush',
+    'laser painter',
+    'qua xaphan v',
+    'trust',
+]
+
+DRIFTER_FOCUSED_DECODING_LEGACY_WEAPONS = [
     'bad omens',
     'borrowed time',
     'bottom dollar',
-    'breakneck',
     'crowd pleaser',
     'dead weight',
-    'gnawing hunger',
     'herod-c',
-    'laser painter',
+    'gnawing hunger',
     'night watch',
-    'qua xaphan v',
     'servant leader',
     'trinary system',
-    'trust',
     'yesteryear',
 ]
 
-WeaponCatagory = namedtuple('WeaponCatagory', 'type owned_weapons url')
+WeaponCatagory = namedtuple('WeaponCatagory', 'type url')
 Weapon = namedtuple('Weapon', 'rank name')
 
-weapon_catagories = [
-    WeaponCatagory('Auto Rifle',          [], 'https://www.thegamer.com/destiny-2-best-auto-rifles-ranked/'),
-    WeaponCatagory('Combat Bow',          [], 'https://www.thegamer.com/destiny-2-top-bows-ranked/'),
-    WeaponCatagory('Fusion Rifle',        [], 'https://www.thegamer.com/destiny-2-top-best-fusion-rifles-ranked/'),
-    WeaponCatagory('Glaive',              [], 'https://www.thegamer.com/destiny-2-glaive-ranked-best-worst/'),
-    WeaponCatagory('Grenade Launcher',    [], 'https://www.thegamer.com/destiny-2-grenade-launchers-ranked/'),
-    WeaponCatagory('Hand Cannon',         [], 'https://www.thegamer.com/destiny-2-best-hand-cannons-pve/'),
-    WeaponCatagory('Linear Fusion Rifle', [], 'https://www.thegamer.com/destiny-2-linear-fusion-rifles-best-worst/'),
-    WeaponCatagory('Machine Gun',         [], 'https://www.thegamer.com/destiny-2-best-machine-guns-ranked/'),
-    WeaponCatagory('Pulse Rifle',         [], 'https://www.thegamer.com/destiny-2-best-pulse-rifles-ranked/'),
-    WeaponCatagory('Rocket Launcher',     [], 'https://www.thegamer.com/destiny-2-top-best-rocket-launchers-ranked/'),
-    WeaponCatagory('Scout Rifle',         [], 'https://www.thegamer.com/destiny-2-best-pve-scout-rifles-ranked/'),
-    WeaponCatagory('Shotgun',             [], 'https://www.thegamer.com/destiny-2-best-pve-shotguns/'),
-    WeaponCatagory('Sidearm',             [], 'https://www.thegamer.com/destiny-2-best-sidearms/'),
-    WeaponCatagory('Sniper Rifle',        [], 'https://www.thegamer.com/destiny-2-best-pve-sniper-rifles-ranked/'),
-    WeaponCatagory('Submachine Gun',      [], 'https://www.thegamer.com/destiny-2-best-pve-smgs-ranked/'),
-    WeaponCatagory('Sword',               [], 'https://www.thegamer.com/destiny-2-top-swords-ranked/'),
-    WeaponCatagory('Trace Rifle',         [], 'https://www.thegamer.com/destiny-2-trace-rifle-ranked-best-worst/'),
+WEAPON_CATAGORIES = [
+    WeaponCatagory('Auto Rifle',          'https://www.thegamer.com/destiny-2-best-auto-rifles-ranked/'),
+    WeaponCatagory('Combat Bow',          'https://www.thegamer.com/destiny-2-top-bows-ranked/'),
+    WeaponCatagory('Fusion Rifle',        'https://www.thegamer.com/destiny-2-top-best-fusion-rifles-ranked/'),
+    WeaponCatagory('Glaive',              'https://www.thegamer.com/destiny-2-glaive-ranked-best-worst/'),
+    WeaponCatagory('Grenade Launcher',    'https://www.thegamer.com/destiny-2-grenade-launchers-ranked/'),
+    WeaponCatagory('Hand Cannon',         'https://www.thegamer.com/destiny-2-best-hand-cannons-pve/'),
+    WeaponCatagory('Linear Fusion Rifle', 'https://www.thegamer.com/destiny-2-linear-fusion-rifles-best-worst/'),
+    WeaponCatagory('Machine Gun',         'https://www.thegamer.com/destiny-2-best-machine-guns-ranked/'),
+    WeaponCatagory('Pulse Rifle',         'https://www.thegamer.com/destiny-2-best-pulse-rifles-ranked/'),
+    WeaponCatagory('Rocket Launcher',     'https://www.thegamer.com/destiny-2-top-best-rocket-launchers-ranked/'),
+    WeaponCatagory('Scout Rifle',         'https://www.thegamer.com/destiny-2-best-pve-scout-rifles-ranked/'),
+    WeaponCatagory('Shotgun',             'https://www.thegamer.com/destiny-2-best-pve-shotguns/'),
+    WeaponCatagory('Sidearm',             'https://www.thegamer.com/destiny-2-best-sidearms/'),
+    WeaponCatagory('Sniper Rifle',        'https://www.thegamer.com/destiny-2-best-pve-sniper-rifles-ranked/'),
+    WeaponCatagory('Submachine Gun',      'https://www.thegamer.com/destiny-2-best-pve-smgs-ranked/'),
+    WeaponCatagory('Sword',               'https://www.thegamer.com/destiny-2-top-swords-ranked/'),
+    WeaponCatagory('Trace Rifle',         'https://www.thegamer.com/destiny-2-trace-rifle-ranked-best-worst/'),
 ]
-weapon_types = [weapon_catagory.type for weapon_catagory in weapon_catagories]
+WEAPON_TYPES = [weapon_catagory.type for weapon_catagory in WEAPON_CATAGORIES]
 
-config = ConfigParser()
-config.read('destiny-item-analyzer.ini')
-API_KEY = config['DEFAULT']['ApiKey']
-USERNAME = config['DEFAULT']['UserName']
-
-client = aiobungie.Client(API_KEY)
-console = Console(highlight=False)
-
-http_headers = {
-    "user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+HTTP_HEADERS = {
+    "user-agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' +
+        'Chrome/125.0.0.0 ' +
+        'Safari/537.36',
 }
-weapon_name_pattern = r'<h2 id="(.*?)">\s?<span class="item-num">(.*?)\s?</span>\s?<span>(.*?)</span>\s?</h2>'
+WEAPON_NAME_PATTERN = r'<h2 id="(.*?)">\s?<span class="item-num">(.*?)\s?</span>\s?<span>(.*?)</span>\s?</h2>'
 
 
-async def get_manifest():
+async def get_manifest(console, client, downloaded_manifest_version):
+    online_manifest_version = await client.rest.fetch_manifest_version()
+
     filename = 'destiny-item-analyzer'
-    if not os.path.isfile(f'{filename}.json'):
-        console.print(f'Downloading manifest to {filename}.json ...')
+    manifest_is_downloaded = os.path.isfile(f'{filename}.json')
+
+    if not (manifest_is_downloaded and online_manifest_version == downloaded_manifest_version):
+        if manifest_is_downloaded:
+            console.print(f'Deleting outdated manifest file ...')
+            os.remove(f'{filename}.json')
+
+        console.print(f'Downloading new manifest file ...')
         await client.rest.download_json_manifest(file_name = filename)
+
+        config = ConfigParser()
+        config.read('destiny-item-analyzer.ini')
+        config['MANIFEST']['downloaded_version'] = online_manifest_version
+        config.write(open('destiny-item-analyzer.ini', 'w'))
+
     with open(f'{filename}.json', "r") as file:
         manifest = json.loads(file.read())
         return list(manifest["DestinyInventoryItemDefinition"].values())
 
 
-async def get_profile(membership_id, membership_type):
+async def get_profile(client, membership_id, membership_type):
     return await client.fetch_profile(
         membership_id,
         membership_type,
@@ -261,7 +284,22 @@ async def get_profile(membership_id, membership_type):
     )
 
 
-async def get_equipment(membership_id, membership_type, character_id):
+async def get_inventory(console, client, membership_id, membership_type, character_id):
+    character = await client.fetch_character(
+        membership_id,
+        membership_type,
+        character_id,
+        components=[
+            aiobungie.ComponentType.CHARACTERS,
+            aiobungie.ComponentType.CHARACTER_INVENTORY,
+        ],
+    )
+    character_class = str(character.character.class_type).title()
+    console.print(f'Getting inventory for {character_class} ...')
+    return character.inventory
+
+
+async def get_equipment(console, client, membership_id, membership_type, character_id):
     character = await client.fetch_character(
         membership_id,
         membership_type,
@@ -276,49 +314,70 @@ async def get_equipment(membership_id, membership_type, character_id):
     return character.equipment
 
 
-def catagorize_equipment(equipment, manifest) -> None:
+def catagorize_equipment(console, equipment, manifest, owned_weapons) -> None:
     for item in equipment:
-        manifest_item = [
+        manifest_items = [
             manifest_item
             for manifest_item in manifest
             if manifest_item['hash'] == item.hash
-        ][0]
+        ]
+        if len(manifest_items) == 0:
+            console.print(f'[yellow]Item not found in manifest: {item.hash}[/yellow]')
+            continue
+
+        manifest_item = manifest_items[0]
+
         item_name = manifest_item['displayProperties']['name']
+        if 'itemTypeDisplayName' not in manifest_item:
+            continue
         item_type = manifest_item['itemTypeDisplayName']
-        if item_type in weapon_types:
-            weapon_catagories[weapon_types.index(item_type)].owned_weapons.append(item_name)
+        if item_type in WEAPON_TYPES:
+            owned_weapons[item_type].append(item_name)
 
 
 async def main():
+    console = Console(highlight=False)
+
     console.print('')
     console.print(f'[bold]Best weapons in Destiny 2 - TheGamer.com[/bold]')
-    console.print(f'{datetime.now().strftime("%Y-%m-%dT%H:%M:%S")}')
     console.print('')
 
-    async with client.rest:
-        manifest = await get_manifest()
+    config = ConfigParser()
+    config.read('destiny-item-analyzer.ini')
 
-        console.print(f'Getting profile for {USERNAME} ...')
-        for user in await client.search_users(USERNAME):
+    api_key = config['DEFAULT']['api_key']
+    username = config['DEFAULT']['username']
+    downloaded_manifest_version = config['MANIFEST']['downloaded_version']
+
+    owned_weapons = {weapon_type: [] for weapon_type in WEAPON_TYPES}
+
+    client = aiobungie.Client(api_key)
+    async with client.rest:
+        manifest = await get_manifest(console, client, downloaded_manifest_version)
+
+        console.print(f'Getting profile for {username} ...')
+        for user in await client.search_users(username):
             for membership in user.memberships:
-                profile = await get_profile(membership.id, membership.type)
+                profile = await get_profile(client, membership.id, membership.type)
 
                 # Build lists of all of the weapons that the characters have equipped.
                 for character_id in profile.characters:
-                    equipment = await get_equipment(membership.id, membership.type, character_id)
-                    catagorize_equipment(equipment, manifest)
+                    inventory = await get_inventory(console, client, membership.id, membership.type, character_id)
+                    catagorize_equipment(console, inventory, manifest, owned_weapons)
+                    equipment = await get_equipment(console, client, membership.id, membership.type, character_id)
+                    catagorize_equipment(console, equipment, manifest, owned_weapons)
                 
                 # Add to the lists all of the weapons in the vault.
                 console.print(f'Getting equipment in the vault ...')
-                catagorize_equipment(profile.profile_inventories, manifest)
+                catagorize_equipment(console, profile.profile_inventories, manifest, owned_weapons)
 
-    for weapon_catagory in weapon_catagories:
+    for weapon_catagory in WEAPON_CATAGORIES:
         console.print('')
         console.print(f'[bold]{weapon_catagory.type}[/bold]')
         console.print(f'[underline blue]{weapon_catagory.url}[/underline blue]')
         console.print('')
 
-        response = requests.get(weapon_catagory.url, headers = http_headers)
+        response = requests.get(weapon_catagory.url, headers = HTTP_HEADERS)
         if response.status_code != 200:
             console.print(f'[red]Unsuccessful. status_code = {response.status_code}[/red]')
             console.print('')
@@ -327,7 +386,7 @@ async def main():
         response_body = response.text.replace('\n', ' ').replace('\r', '')
 
         best_weapons = []
-        for match in re.finditer(weapon_name_pattern, response_body):
+        for match in re.finditer(WEAPON_NAME_PATTERN, response_body):
             best_weapon_rank = int(match.group(2))
             best_weapon_name = html.unescape(match.group(3))
             best_weapons.append(Weapon(rank = best_weapon_rank, name = best_weapon_name))
@@ -339,46 +398,59 @@ async def main():
             best_weapon_name = best_weapon.name.strip()
             best_weapon_name_lowered = best_weapon_name.lower()
 
-            owned_weapons = [owned_weapon.lower() for owned_weapon in weapon_catagory.owned_weapons]
+            owned_weapons_of_this_type_lowered = [weapon.lower() for weapon in owned_weapons[weapon_catagory.type]]
 
-            if best_weapon_name_lowered in owned_weapons:
+            if best_weapon_name_lowered in owned_weapons_of_this_type_lowered:
                 best_weapon_name = f'[underline]{best_weapon_name}[/underline]'
-            if best_weapon_name_lowered in red_war_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Red War Exotics[/yellow])'
-            if best_weapon_name_lowered in forsaken_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Forsaken Exotics[/yellow])'
-            if best_weapon_name_lowered in shadowkeep_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Shadowkeep Exotics[/yellow])'
-            if best_weapon_name_lowered in beyond_light_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Beyond Light Exotics[/yellow])'
-            if best_weapon_name_lowered in the_witch_queen_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - The Witch Queen Exotics[/yellow])'
-            if best_weapon_name_lowered in lightfall_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - Lightfall Exotics[/yellow])'
-            if best_weapon_name_lowered in the_final_shape_exotic_weapons:
-                best_weapon_name = f'{best_weapon_name} ([yellow]Exotic Archive - The Final Shape Exotics[/yellow])'
-            if best_weapon_name_lowered in legacy_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy[/purple])'
-            if best_weapon_name_lowered in legacy_crucible_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Crucible[/purple])'
-            if best_weapon_name_lowered in legacy_gambit_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Gambit[/purple])'
-            if best_weapon_name_lowered in legacy_vanguard_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Exotic Archive - Legacy Vanguard[/purple])'
-            if best_weapon_name_lowered in gunsmith_focused_decoding_suros_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Suros[/purple])'
-            if best_weapon_name_lowered in gunsmith_focused_decoding_omolon_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Focused Decoding - Omolon[/purple])'
-            if best_weapon_name_lowered in gunsmith_featured_weapons:
-                best_weapon_name = f'{best_weapon_name} ([purple]Gunsmith - Featured[/purple])'
-            if best_weapon_name_lowered in vanguard_weapons:
-                best_weapon_name = f'{best_weapon_name} ([blue]Vanguard[/blue])'
-            if best_weapon_name_lowered in drifter_weapons:
-                best_weapon_name = f'{best_weapon_name} ([green]Drifter[/green])'
+
+            if best_weapon_name_lowered in RED_WAR_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Red War Exotics)'
+            if best_weapon_name_lowered in FORSAKEN_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Forsaken Exotics)'
+            if best_weapon_name_lowered in SHADOWKEEP_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Shadowkeep Exotics)'
+            if best_weapon_name_lowered in BEYOND_LIGHT_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Beyond Light Exotics)'
+            if best_weapon_name_lowered in THE_WITCH_QUEEN_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - The Witch Queen Exotics)'
+            if best_weapon_name_lowered in LIGHTFALL_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Lightfall Exotics)'
+            if best_weapon_name_lowered in THE_FINAL_SHAPE_EXOTIC_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - The Final Shape Exotics)'
+            if best_weapon_name_lowered in LEGACY_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy)'
+            if best_weapon_name_lowered in LEGACY_CRUCIBLE_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Crucible)'
+            if best_weapon_name_lowered in LEGACY_GAMBIT_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Gambit)'
+            if best_weapon_name_lowered in LEGACY_VANGUARD_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Exotic Archive - Legacy Vanguard)'
+
+            if best_weapon_name_lowered in GUNSMITH_FOCUSED_DECODING_SUROS_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Focused Decoding - Suros)'
+            if best_weapon_name_lowered in GUNSMITH_FOCUSED_DECODING_FIELD_FORGED_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Focused Decoding - Field-Forged)'
+            if best_weapon_name_lowered in GUNSMITH_FEATURED_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Gunsmith - Featured)'
+
+            if best_weapon_name_lowered in VANGUARD_FOCUSED_DECODING_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding)'
+            if best_weapon_name_lowered in VANGUARD_FOCUSED_DECODING_NIGHTFALL_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Nightfall)'
+            if best_weapon_name_lowered in VANGUARD_FOCUSED_DECODING_LEGACY_VANGUARD_OPS_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Legacy Vanguard Ops)'
+            if best_weapon_name_lowered in VANGUARD_FOCUSED_DECODING_LEGACY_NIGHTFALL_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Vanguard - Focused Decoding - Legacy Nightfall)'
+
+            if best_weapon_name_lowered in DRIFTER_FOCUSED_DECODING_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Drifter - Focused Decoding)'
+            if best_weapon_name_lowered in DRIFTER_FOCUSED_DECODING_LEGACY_WEAPONS:
+                best_weapon_name = f'{best_weapon_name} (Drifter - Focused Decoding - Legacy)'
 
             console.print(f'{best_weapon.rank:02d} - {best_weapon_name}')
 
     console.print('')
+
 
 if __name__ == '__main__':
     asyncio.run(main())
