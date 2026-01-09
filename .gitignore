@@ -1,5 +1,5 @@
 .dia-venv/
-.vscode/
+.vscode/bookmarks.json
 .venv/
 __pycache__/
 *.py[cod]
