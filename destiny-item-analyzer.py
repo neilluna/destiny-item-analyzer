@@ -226,6 +226,13 @@ async def main():
                     best_weapons.append(anchor_text)
                     continue
 
+            span: Tag = weapon_cell.find('span')
+            if span:
+                span_text = span.get_text(strip=True)
+                if span_text:
+                    best_weapons.append(span_text)
+                    continue
+
             cell_texts: list[str] = [
                 weapon_cell_text.strip()
                 for weapon_cell_text in weapon_cell.find_all(string=True, recursive=False)
